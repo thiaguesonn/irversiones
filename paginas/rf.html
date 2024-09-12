@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+   <p id="rf">
+    En estos relatos se presentan hechos sobrenaturales que no tienen una explicación alguna, es decir, no tienen una explicación lógica, ni para el lector ni para los personajes. Esto genera una sensación de duda o vacilación frente a los hechos. La interpretación será tarea del lector.
+   </p>  
+   <button id="btn_leer" class="btn_leer">
+    leer
+   </button>
+   <button id="btn-stop" class="btn-stop">stop</button>
+   <div id="imagen1"></div>
+   <div id="imagen2"></div>
+   <div id="imagen3"></div>
+   <script>
+    const btnLeer = document.getElementById('btn_leer')
+    const btnStop = document.getElementById('btn-stop')
+    let motor = window.speechSynthesis;
+        motor.volume = 1;
+        motor.rate = 0.5;
+        motor.pitch = 0.6;
+    let sonido = new SpeechSynthesisUtterance();
+
+    btnLeer.addEventListener('click',function(){
+        const parrafo = document.getElementById('rf').innerText;
+        
+    sonido.text = parrafo;
+    motor.speak(sonido);
+    })
+    btnStop.addEventListener('click', function(){
+        motor.cancel();
+    })
+setTimeout(()=>{ 
+    document.getElementById('imagen1').innerHTML = '<img src="../imagenes/rf.jpg" class="img-1">'; 
+    document.getElementById('imagen2').innerHTML = '<img src="../imagenes/rf(2).jpg" class="img-1">'; 
+    document.getElementById('imagen3').innerHTML = '<img src="../imagenes/rf(3).jpg" class="img-1">'; 
+    
+}, 5000);
+    
+   </script>
+</body>
+</html>

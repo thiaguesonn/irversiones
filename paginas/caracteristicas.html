@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>caracteristicas</title>
+</head>
+<body>
+    <ul>
+        <li><p id="primer-parrafo"></p></li>
+        <li>En este marco realista sucede la irrupción de un evento sobrenatural, por lo tanto el mundo cotidiano se ve interrumpido por una situación que sale de la lógica, por lo tanto que no tiene ninguna explicación.</li>
+        <li>La lectura de cuentos fantásticos nos conduce a un estado de incertidumbre, es decir, sentimos que no entendemos qué sucedió.</li>
+    </ul>
+    <script>
+        const parrafo1 = "La narración suele comenzar en un marco realista, es decir, presenta los personajes, lugares y situaciones cotidianas que no salen de lo común";
+       // alert(parrafo1)
+        let cadena = parrafo1.split('');
+        let contador =0;
+        console.log(cadena);
+
+        let tiempo =setInterval(escribir, 100);
+        
+        function escribir(){
+            document.getElementById('primer-parrafo').innerHTML += cadena[contador];
+            contador+=1;
+            if(contador==cadena.length){ 
+            clearInterval(tiempo);
+            }
+        }
+    </script>
+</body>
+</html>

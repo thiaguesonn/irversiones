@@ -1,0 +1,59 @@
+body{
+    background: rgb(28,15,255);
+    background: linear-gradient(90deg, rgba(28,15,255,1) 16%, rgba(121,9,9,1) 45%, rgba(255,0,206,1) 97%);  
+}
+p{
+    background-color: rgb(201, 10, 191);
+    padding: 5px 5px;
+    }
+    .btn_leer{
+        width: 15%;
+        height: 15%;
+        background-color:lightpink;
+        box-shadow: 3px 3px;
+        border-radius: 5px 5px;
+        transition: 0.2s;
+    }
+    .btn_leer:hover{
+        width: 15%;
+        height: 15%;
+        background-color:rgb(255, 0, 0);
+        box-shadow: 5px 5px;
+        border-radius: 5px 5px;
+        cursor: pointer; 
+        transform: scale(1.05);
+    }
+    .btn-stop{
+        width: 15%;
+        height: 15%;
+        background-color:rgb(238, 105, 17);
+        box-shadow: 3px 3px;
+        border-radius: 5px 5px;
+        transition: 0.2s;
+    }
+    .btn-stop:hover{
+        width: 15%;
+        height: 15%;
+        background-color:rgb(255, 0, 0);
+        box-shadow: 5px 5px;
+        border-radius: 5px 5px;
+        cursor: pointer; 
+        transform: scale(1.05);
+    }
+    .img-1{
+        width: 150px;
+        height: 150px;
+        border: 5px solid black;
+        transition:0.2s;
+        animation-name:imagen-transicion-1 ;
+        animation-duration:7s;
+        animation-iteration-count: infinite;
+
+    }
+    .img-1:hover{ 
+        transform: scale(1.05);
+    }
+    @keyframes imagen-transicion-1 {
+        from{opacity: 0; top: 200px;}
+        to{opacity: 1; top: 400px;}
+    }
